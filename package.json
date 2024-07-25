@@ -35,7 +35,8 @@
     "types"
   ],
   "dependencies": {
-    "@noble/hashes": "^1.2.0"
+    "@noble/hashes": "^1.2.0",
+    "react-native-quick-crypto": "^0.7.1"
   },
   "devDependencies": {
     "@types/node": "11.11.6",
