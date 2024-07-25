@@ -49,8 +49,7 @@ function mnemonicToSeedSync(mnemonic, password) {
     64,
     'sha512',
   );
-
-  return Buffer.from(res);
+  return res;
 }
 exports.mnemonicToSeedSync = mnemonicToSeedSync;
 function mnemonicToSeed(mnemonic, password) {
@@ -60,7 +59,6 @@ function mnemonicToSeed(mnemonic, password) {
   const saltBuffer = Uint8Array.from(
     Buffer.from(salt(normalize(password)), 'utf8'),
   );
-
   return new Promise((resolve, reject) => {
     QuickCrypto.pbkdf2(
       mnemonicBuffer,
